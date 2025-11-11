@@ -7,6 +7,7 @@ import os, streamlit as st
 
 st.write("📂 Current working directory:", os.getcwd())
 st.write("📄 Files in this folder:", os.listdir())
+st.write("📄 Files in this folder:", os.listdir("HopeAI"))
 
 Logistic=joblib.load(r"HopeAI\logistic_regression.pkl")
 random_forest=joblib.load(r"HopeAI\random_forset.pkl")
@@ -89,6 +90,7 @@ elif model_option=="Metrics":
         st.table(pd.read_csv(r"Accuracy.csv"))
         st.table(pd.read_csv(r"classification_report.csv"))
         st.table(pd.read_csv(r"confusion_matrix.csv"))
+
 
 
 
