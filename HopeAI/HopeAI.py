@@ -3,10 +3,10 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from sklearn.preprocessing import LabelEncoder
-Logistic=joblib.load("logistic_regression.pkl")
-random_forest=joblib.load(r"random_forset.pkl")
-decision_tree=joblib.load(r"decision_tree_classifier.pkl")
-svm=joblib.load(r"support_vector_classifier.pkl")
+Logistic=joblib.load(r"HopeAI\logistic_regression.pkl")
+random_forest=joblib.load(r"HopeAI\random_forset.pkl")
+decision_tree=joblib.load(r"HopeAI\decision_tree_classifier.pkl")
+svm=joblib.load(r"HopeAI\support_vector_classifier.pkl")
 st.title("Smart System for Academic Mental Health Monitoring")
 
 model_option=st.sidebar.radio("Chosse the Model",["Logistic Regression","Random Forest","Decision Tree","Support Vector Classifier","Metrics"])
@@ -84,6 +84,7 @@ elif model_option=="Metrics":
         st.table(pd.read_csv(r"Accuracy.csv"))
         st.table(pd.read_csv(r"classification_report.csv"))
         st.table(pd.read_csv(r"confusion_matrix.csv"))
+
 
 
 
