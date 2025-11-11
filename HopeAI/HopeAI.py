@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from sklearn.preprocessing import LabelEncoder
+import os, streamlit as st
+
+st.write("📂 Current working directory:", os.getcwd())
+st.write("📄 Files in this folder:", os.listdir())
+
 Logistic=joblib.load(r"HopeAI\logistic_regression.pkl")
 random_forest=joblib.load(r"HopeAI\random_forset.pkl")
 decision_tree=joblib.load(r"HopeAI\decision_tree_classifier.pkl")
@@ -84,6 +89,7 @@ elif model_option=="Metrics":
         st.table(pd.read_csv(r"Accuracy.csv"))
         st.table(pd.read_csv(r"classification_report.csv"))
         st.table(pd.read_csv(r"confusion_matrix.csv"))
+
 
 
 
